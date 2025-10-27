@@ -33,9 +33,6 @@ jobs:
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/ruby-libvips
           tags: |
-            type=ref,event=branch
-            type=ref,event=pr
-            type=sha
             type=raw,value=latest
 
       - name: Build and push Docker image
